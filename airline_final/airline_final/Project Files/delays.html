@@ -1,0 +1,250 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Airline Delays</title>
+  <meta name="keywords" content="css3, html5, js, background video, fullscreen video">
+  <meta name="description" content="Super easy to implement HTML5 fullscreen background video library in JavaScript.">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html{
+      font-size: 10px;
+      font-family: "Roboto Cn", sans-serif;
+    }
+    body{
+      text-align: center;
+      overflow-x: hidden;
+      background-image: url(Images/flight_delay.jpg);
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    a{
+      text-decoration: none;
+      color: #fff;
+    }
+    header{
+      width: 100%;
+    }
+    .container{
+      max-width: 120rem;
+      width: 90%;
+      margin: 0 auto;
+    }
+    nav{
+      padding-top: 5rem;
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: right;
+      text-transform: uppercase;
+      font-size: 1.6rem;
+    }
+    .brand{
+      font-size: 3rem;
+      font-weight: 300;
+      transform: translateX(-100rem);
+      animation: slideIn .5s forwards;
+    }
+    .brand span{
+      color: rgb(0, 17, 255);
+    }
+    nav ul{
+      display: flex;
+    }
+    nav ul li{
+      list-style: none;
+      transform: translateX(100rem);
+      animation: slideIn .5s forwards;    }
+    nav ul li:nth-child(1){
+      animation-delay: 0s;
+    }
+    nav ul li:nth-child(2){
+      animation-delay: .5s;
+    }
+    nav ul li:nth-child(3){
+      animation-delay: 1s;
+    }
+    nav ul li:nth-child(4){
+      animation-delay: 1.5s;
+    }
+    nav ul li a{
+      padding: 1rem 0;
+      margin: 0 3rem;
+      position: relative;
+      letter-spacing: 2px;
+    }
+    nav ul li a:last-child{
+      margin-right: 0;
+    }
+    nav ul li a::before,
+    nav ul li a::after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: rgb(0, 17, 255);
+      left: 0;
+      transform: scaleX(0);
+      transition: all .5s;
+    }
+    nav ul li a::before{
+      top: 0;
+      transform-origin: left;
+    }
+    nav ul li a::after{
+      bottom: 0;
+      transform-origin: right;
+    }
+    nav ul li a:hover::before,
+    nav ul li a:hover::after{
+      transform: scaleX(1);
+    }
+    .col-md-4 h3{
+      font-size: 13pt;
+      text-decoration: none;
+      color: #fff;
+      padding: 3px;
+      border: 5px solid #fff;    
+    }
+    .title{
+      left: 57pc;
+      top: .5pc;
+      position: center;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      padding: 5px 20px;
+    }
+    @keyframes slideIn{
+      from{
+
+      }
+      to{
+        transform: translateX(0);
+      }
+    }
+    img{
+      border-radius: 20px;
+      
+    }
+    .col-md-4{
+      float:center;
+      padding: 5px;
+    }
+    /* .h3{
+      padding: 20px;
+    }  */
+    
+  </style>
+
+
+</head>
+
+<body>
+  <header>
+      <div class="container">
+        <nav>
+          <h1 class="brand"><a href="delays.html"><span>D</span>e<span>l</span>a<span>y</span>s</a></h1>
+          <ul>
+              <!-- Logo and responsive toggle -->
+              <li><a href="home_page/home.html" target="_blank">
+                Take me back home!</a></li>
+              <li><a href="twitter_test.html" target="_blank">
+                On to Twitter Sentiment!</a></li>
+              <li><a href="machine_learning.html" target="_blank">
+                On to Machine Learning!</a></li>
+          </ul>
+        </nav>
+      </div>
+    <div class="title">
+        <h1>Airline Delays</h1>
+    </div>
+  </header>
+​
+<!-- Content -->
+<!-- <div class="container">​
+  <div class="row">   
+    <div class="col-md-4">
+      <h3>Airline Size</h3>
+      <br>
+      <img class="img-responsive" src="Images/sentiments_bargraph.png" alt="">
+    </div>
+  </div> -->
+
+<!--Largest Carriers--> 
+<div class="row">  
+  <div class="col-md-4">
+      <br>
+      <h3>2015 Largest Carriers</h3>
+      <br>
+      <img src="Images/largest_airlines_chart.png" alt="" width="auto" height="auto">
+      <img src="Images/largest_airlines_table.png" alt="" width="912" height="660">    
+  </div>
+    
+  
+  <!--Total Annual Time Delayed--> 
+  <div class="row">  
+    <div class="col-md-4">
+      <br>
+      <h3>2015 Annual Total Time Delayed</h3>
+      <br>
+      <img src="Images/total_delays_all.png" alt="">
+      <img src="Images/total_delays_6.png" alt="">
+    </div>
+  </div>
+<!--Average Delay for a delayed flight-->  
+  <div class="row">  
+    <div class="col-md-4">
+      <br>
+      <h3>Average Delay for a Delayed Flight by Airline</h3>
+      <br>
+      <img src="Images/avg_delay_all.png" alt="">
+      <img src="Images/avg_delay6.png" alt="">
+    </div>
+  </div>
+  <!--Percentage on time-->  
+  <div class="row">  
+      <div class="col-md-4">
+        <br>
+        <h3>Average Percentage of Flights On Time</h3>
+        <br>
+        <img src="Images/per_on_time_all.png" alt="">
+        <img src="Images/per_on_time_6.png" alt="">
+      </div>
+    </div>
+
+
+
+
+        <!-- <div class="col-md-4">
+          <br>
+          <h3>Total Delay Time</h3>
+          <br>
+              <img class="img-responsive" src="Images/total_delays_all.png" alt="">
+        </div>
+    </div>
+
+        <div class="col-md-4">
+            <br>
+            <h3>Negative WordCloud</h3>
+            <br>
+                <img class="img-responsive" src="Images/neg_cloud.png" alt="" width="940" height="800">
+        </div>
+        <div class="col-md-4">
+            <br>
+            <h3>Positive WordCloud</h3>
+            <br>
+                <img class="img-responsive" src="Images/pos_cloud.png" alt="" width="940" height="800">
+        </div>
+    </div> -->
+
+</body>
+​
+</html>
